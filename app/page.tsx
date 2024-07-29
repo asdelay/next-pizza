@@ -1,4 +1,4 @@
-import {Container, Title, TopBar } from "@/components/shared";
+import {Container, Title, TopBar, Filters } from "@/components/shared";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
         
       </Container>
       <TopBar />
-      <Container className="pb-14">
+      <Container className="pb-14 mt-10">
         <div className="flex gap-[60px]">
           {/* Filtration */}
           <div className="w-[250px]">
