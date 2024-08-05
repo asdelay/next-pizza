@@ -17,11 +17,11 @@ export const ProductCard: FC<Props> = ({className, id, name, price, imageUrl}) =
 return (
     <div className={className}>
         <Link href={`/product/${id}/`}>
-            <div className="flex flex-col justify-center p-6 bg-secondary rounded-lg h-[260px]">
-                {/* potential bugs (used Image from next instead of img 1:55:00) */}
-                <img className='w-[215px] h-[215px]' src={imageUrl} alt={name} />
+            <div className="flex justify-center p-6 bg-secondary rounded-lg h-[260px]">
+                <img className='w-[215px] h-[215px]' src={imageUrl} alt={name} />                
+            </div>
 
-                <Title text={name} size='sm' className='mb-1 mt-3 font-bold'/>
+            <Title text={name} size='sm' className='mb-1 mt-3 font-bold'/>
 
                 <p className='text-sm text-gray-400'>
                     увага захардкожені інгредієнти розпарсіть дані бічез
@@ -37,7 +37,6 @@ return (
                         Додати
                     </Button>
                 </div>
-            </div>
         </Link>
     </div>
 )
