@@ -22,34 +22,16 @@ export default function Home() {
                 items={[
                   {id: 0, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
                   {id: 1, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
-                  {id: 0, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
-                  {id: 1, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
-                  {id: 0, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
-                  {id: 1, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
-                  {id: 0, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
-                  {id: 1, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
-                  {id: 0, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
-                  {id: 1, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
-                  {id: 0, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
-                  {id: 1, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
+                  {id: 2, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
+                  {id: 3, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
                 ]} 
-                categoryId={1}
+                categoryId={0}
               />
               <ProductsGroupList 
                 title="Комбо" 
                 items={[
-                  {id: 0, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
-                  {id: 1, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
-                  {id: 0, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
-                  {id: 1, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
-                  {id: 0, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
-                  {id: 1, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
-                  {id: 0, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
-                  {id: 1, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
-                  {id: 0, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
-                  {id: 1, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
-                  {id: 0, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
-                  {id: 1, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
+                  {id: 12, name: "Бургер-піца", price: 2, items: [{price: 2}],  imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EE7D61698827EE9B8DB6D0AEC53410.avif' },
+                  {id: 13, name: "Мʼясна з аджикою", price: 200, items: [{price: 2}], imageUrl: 'https://media.dodostatic.net/image/r:584x584/11EF438E93884BFEBFE79D11095AE2D4.avif' },
                 ]} 
                 categoryId={1}
               />
