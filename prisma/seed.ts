@@ -1,3 +1,4 @@
+import { categories, ingredients } from "./constants"
 import { prisma } from "./prisma-client"
 import {hashSync} from "bcrypt"
 
@@ -19,6 +20,12 @@ async function up () {
                 verified: new Date()
             },
         ]
+    })
+    await prisma.category.createMany({
+        data: categories
+    })
+    await prisma.ingredient.createMany({
+        data: ingredients
     })
 }
 
