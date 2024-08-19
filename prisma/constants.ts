@@ -131,12 +131,12 @@ export const products = [
         categoryId: 3
       },
       {
-        name: "Додстер",
+        name: "Dodster",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE796F96D11392A2F6DD73599921B9.webp",
         categoryId: 3
       },
       {
-        name: "Гострий Додстер 🌶️🌶️",
+        name: "Hot dodster 🌶️🌶️",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE796FD3B594068F7A752DF8161D04.webp",
         categoryId: 3
       },
