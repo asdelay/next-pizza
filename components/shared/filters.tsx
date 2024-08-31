@@ -1,12 +1,19 @@
+'use client'
 import React, {FC} from 'react'
 
 import { FilterCheckbox, Title, RangeSlider, CheckboxFiltersGroups } from './'
 import { Input } from '../ui'
+import { Ingredient } from '@prisma/client'
+import {useFilterIngredients} from '../../hooks/useFilterIngredients'
 interface Props {
     className?: string
 }
 
 export const Filters: FC<Props> = ({className}) => {
+    const {ingredients} = useFilterIngredients()
+
+    const items = ingredients.map(item => ({value: String(item.id), text: item.name}))
+
 return (
     <div className={className}>
         <Title text="Фільтрація" size="sm" className='mb-5 font-bold'/> 
@@ -31,106 +38,8 @@ return (
             title='Інгредієнти' 
             className='mt-5'
             limit={6}
-            defaultItems={[
-                {
-                    text: 'Сирний соус',
-                    value: '1',
-                },
-                {
-                    text: 'Моцарела',
-                    value: '2',
-                },
-                {
-                    text: 'Часник',
-                    value: '3',
-                },
-                {
-                    text: 'Солоні огірки',
-                    value: '4',
-                },
-                {
-                    text: 'Червона цибуля',
-                    value: '5',
-                },
-                {
-                    text: 'Томати',
-                    value: '6',
-                },
-                {
-                    text: 'Сирний соус',
-                    value: '1',
-                },
-                {
-                    text: 'Моцарела',
-                    value: '2',
-                },
-                {
-                    text: 'Часник',
-                    value: '3',
-                },
-                {
-                    text: 'Солоні огірки',
-                    value: '4',
-                },
-                {
-                    text: 'Червона цибуля',
-                    value: '5',
-                },
-                {
-                    text: 'Томати',
-                    value: '6',
-                },
-            ]}
-            items={[
-                {
-                    text: 'Сирний соус',
-                    value: '1',
-                },
-                {
-                    text: 'Моцарела',
-                    value: '2',
-                },
-                {
-                    text: 'Часник',
-                    value: '3',
-                },
-                {
-                    text: 'Солоні огірки',
-                    value: '4',
-                },
-                {
-                    text: 'Червона цибуля',
-                    value: '5',
-                },
-                {
-                    text: 'Томати',
-                    value: '6',
-                },
-                {
-                    text: 'Сирний соус',
-                    value: '1',
-                },
-                {
-                    text: 'Моцарела',
-                    value: '2',
-                },
-                {
-                    text: 'Часник',
-                    value: '3',
-                },
-                {
-                    text: 'Солоні огірки',
-                    value: '4',
-                },
-                {
-                    text: 'Червона цибуля',
-                    value: '5',
-                },
-                {
-                    text: 'Томати',
-                    value: '6',
-                },
-            ]}
+            defaultItems={items.slice(0, 6)}
+            items={items}
 
         />
     </div>

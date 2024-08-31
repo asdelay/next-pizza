@@ -1,11 +1,11 @@
 export const categories = [
-    {name: 'Піци'},
-    {name: 'Комбо'},
-    {name: 'Закуски'},
-    {name: 'Коктейлі'},
-    {name: 'Кава'},
-    {name: 'Напої'},
-    {name: 'Десерти'},
+    {name: 'Pizza'},
+    {name: 'Combo'},
+    {name: 'Snacks'},
+    {name: 'Coctails'},
+    {name: 'Coffe'},
+    {name: 'Drinks'},
+    {name: 'Deserst'},
 ]
 export const ingredients = [
     {
@@ -101,32 +101,32 @@ export const ingredients = [
 ].map((item, index) => ({id: index+1, ...item}))
 export const products = [
     {
-        name: "Омлет з шинкою та грибами",
+        name: "Omelette with ham and mushrooms",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7970321044479C1D1085457A36EB.webp",
         categoryId: 2
       },
       {
-        name: "Омлет з пепероні",
+        name: "Omelette with pepperoni",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE94ECF33B0C46BA410DEC1B1DD6F8.webp",
         categoryId: 2
       },
       {
-        name: "Кава Лате",
+        name: "Latte",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D61B0C26A3F85D97A78FEEE00AD.webp",
         categoryId: 2
       },
       {
-        name: "Денвіч шинка і сир",
+        name: "Denvich ham&cheese",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE796FF0059B799A17F57A9E64C725.webp",
         categoryId: 3
       },
       {
-        name: "Курячі нагетси",
+        name: "Chicken nuggets",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D618B5C7EC29350069AE9532C6E.webp",
         categoryId: 3
       },
       {
-        name: "Печена картопля з соусом 🌱",
+        name: "Baked potato with sauce 🌱",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EED646A9CD324C962C6BEA78124F19.webp",
         categoryId: 3
       },
@@ -136,52 +136,52 @@ export const products = [
         categoryId: 3
       },
       {
-        name: "Hot dodster 🌶️🌶️",
+        name: "Hot Dodster 🌶️🌶️",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE796FD3B594068F7A752DF8161D04.webp",
         categoryId: 3
       },
       {
-        name: "Банановий молочний коктейль",
+        name: "Banana milkshake",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EEE20B8772A72A9B60CFB20012C185.webp",
         categoryId: 4
       },
       {
-        name: "Карамельне яблуко молочний коктейль",
+        name: "Caramel apple milkshake",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE79702E2A22E693D96133906FB1B8.webp",
         categoryId: 4
       },
       {
-        name: "Молочний коктейль з печивом Орео",
+        name: "Milkshake with Oreo",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE796FA1F50F8F8111A399E4C1A1E3.webp",
         categoryId: 4
       },
       {
-        name: "Класичний молочний коктейль 👶",
+        name: "Classic milkshak 👶",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE796F93FB126693F96CB1D3E403FB.webp",
         categoryId: 4
       },
       {
-        name: "Ірландський капучино",
+        name: "Irish capuccino",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D61999EBDA59C10E216430A6093.webp",
         categoryId: 5
       },
       {
-        name: "Кава карамельний капучино",
+        name: "Caramel capuccino",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D61AED6B6D4BFDAD4E58D76CF56.webp",
         categoryId: 5
       },
       {
-        name: "Кава кокосовий лате",
+        name: "Coconut latte",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D61B19FA07090EE88B0ED347F42.webp",
         categoryId: 5
       },
       {
-        name: "Кава Американо",
+        name: "Americano",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D61B044583596548A59078BBD33.webp",
         categoryId: 5
       },
       {
-        name: "Кава Лате",
+        name: "Latte",
         imageUrl: "https://media.dodostatic.net/image/r:292x292/11EE7D61B0C26A3F85D97A78FEEE00AD.webp",
         categoryId: 5
       }
