@@ -1,7 +1,8 @@
 'use client'
 import React, {FC, useState} from 'react'
 import { FilterChecboxProps, FilterCheckbox } from './filter-checkbox';
-import { Input } from '../ui';
+import { Input, Skeleton } from '../ui';
+import { setegid } from 'process';
 
 type Item = FilterChecboxProps
 
@@ -11,9 +12,12 @@ interface Props {
     defaultItems: Item[];
     limit?: number;
     searchInputPlaceholder?: string;
-    onChange?: (values: string[]) => void;
+    onClickCheckbox?: (id: string) => void;
     defaultValue?: string[];
     className?: string;
+    loading?: boolean;
+    selectedIds?: Set<string>
+    name?: string
 }
 
 export const CheckboxFiltersGroups: FC<Props> = (
@@ -23,13 +27,27 @@ export const CheckboxFiltersGroups: FC<Props> = (
         defaultItems,
         limit = 5,
         searchInputPlaceholder = 'Пошук...',
-        onChange,
+        onClickCheckbox,
+        loading,
         defaultValue,
         className,
+        selectedIds,
+        name
     }
 ) => {
     const [showAll, setShowAll] = useState(false)
     const [search, setSearch] = useState('')
+
+    if(loading){
+        return (<div className={className}>
+            <p className='font-bold mb-3'>{title}</p>
+            {
+                ...Array(limit).fill(0).map((_, idx) => <Skeleton key={idx} className='h-6 mb-4 rounded-[8px]'></Skeleton>)
+            }
+            <Skeleton className=' w-28 h-6 mb-4 rounded-[8px]'></Skeleton>
+            
+        </div>)
+    }
 
     const list = showAll 
     ? items.filter(item => item.text.toLowerCase().includes(search.toLowerCase())) 
@@ -60,8 +78,9 @@ export const CheckboxFiltersGroups: FC<Props> = (
                             text={item.text}
                             value={item.value}
                             endAdornment={item.endAdornment}
-                            checked={false}
-                            onCheckedChange={(ids) => console.log(ids)}
+                            checked={selectedIds?.has(item.value)}
+                            onCheckedChange={() => onClickCheckbox?.(item.value)}
+                            name={name}
                             
                         />
                     )
