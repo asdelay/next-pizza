@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {Header} from '../../components/shared/index'
+import {Header} from '../../shared/components/shared/index'
 
 export const metadata: Metadata = {
   title: "Next Pizza | Main",

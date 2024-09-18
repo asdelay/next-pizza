@@ -9,91 +9,91 @@ export const categories = [
 ]
 export const ingredients = [
     {
-        name: 'Сирний бортик',
+        name: 'Cheesy crust',
         price: 179,
         imageUrl:
           'https://cdn.dodostatic.net/static/Img/Ingredients/99f5cb91225b4875bd06a26d2e842106.png',
       },
       {
-        name: 'Вершкова моцарела',
+        name: 'Mozarella',
         price: 79,
         imageUrl:
           'https://cdn.dodostatic.net/static/Img/Ingredients/cdea869ef287426386ed634e6099a5ba.png',
       },
       {
-        name: 'Сири чедер та пармезан',
+        name: 'Cheddar and Parmezan',
         price: 79,
         imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA69C1FE796',
       },
       {
-        name: 'Гострый перець халапеньо',
+        name: 'Jalapeno',
         price: 59,
         imageUrl:
           'https://cdn.dodostatic.net/static/Img/Ingredients/11ee95b6bfdf98fb88a113db92d7b3df.png',
       },
       {
-        name: 'Ніжне курча',
+        name: 'Soft Chicken',
         price: 79,
         imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA5B328D35A',
       },
       {
-        name: 'Печериці',
+        name: 'Champignons',
         price: 59,
         imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA67259A324',
       },
       {
-        name: 'Шинка',
+        name: 'Ham',
         price: 79,
         imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA61B9A8D61',
       },
       {
-        name: 'Пікантне пепероні',
+        name: 'Spicy Pepperoni',
         price: 79,
         imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA6258199C3',
       },
       {
-        name: 'Гостра чорізо',
+        name: 'Spicy Chorizo',
         price: 79,
         imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA62D5D6027',
       },
       {
-        name: 'Мариновані огірки',
+        name: 'Pickles',
         price: 59,
         imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A21DA51A81211E9EA89958D782B',
       },
       {
-        name: 'Свіжі томати',
+        name: 'Fresh Tomatoes',
         price: 59,
         imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA7AC1A1D67',
       },
       {
-        name: 'Червона цибуля',
+        name: 'Red Onion',
         price: 59,
         imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA60AE6464C',
       },
       {
-        name: 'Соковиті ананаси',
+        name: 'Juicy Pineapples',
         price: 59,
         imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A21DA51A81211E9AFA6795BA2A0',
       },
       {
-        name: 'Італійські трави',
+        name: 'Italian seasonings',
         price: 39,
         imageUrl:
           'https://cdn.dodostatic.net/static/Img/Ingredients/370dac9ed21e4bffaf9bc2618d258734.png',
       },
       {
-        name: 'Солодкий перець',
+        name: 'Sweet Pepper',
         price: 59,
         imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A22FA54A81411E9AFA63F774C1B',
       },
       {
-        name: 'Кубики бринзи',
+        name: 'Cheese cubes',
         price: 79,
         imageUrl: 'https://cdn.dodostatic.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA6B0FFC349',
       },
       {
-        name: 'Мітболи',
+        name: 'Meatballs',
         price: 79,
         imageUrl:
           'https://cdn.dodostatic.net/static/Img/Ingredients/b2f3a5d5afe44516a93cfc0d2ee60088.png',
