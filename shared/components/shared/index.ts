@@ -16,3 +16,5 @@ export {GroupVariants} from './group-variants';
 export {ChooseProductModal} from './modals/choose-product-modal'
 export {ChooseProductForm} from './choose-product-form'
 export {IngredientItem} from './ingredient-item'
+export {CartButton} from './cart-button'
+export {CartDrawer} from './cart-drawer'
