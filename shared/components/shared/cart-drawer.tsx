@@ -1,3 +1,4 @@
+'use client'
 import React, {FC} from 'react'
 import {
     Sheet,
@@ -11,6 +12,7 @@ import {
 import Link from 'next/link'
 import { Button } from '../ui'
 import { ArrowRight } from 'lucide-react'
+import { CartDrawerItem } from './cart-drawer-item'
   
 interface Props {
     className?: string
@@ -27,7 +29,15 @@ return (
                 </SheetTitle>
             </SheetHeader>
 
-            {/* items */}
+            <div className='-mx-6 mt-5 overflow-auto flex-1'>
+                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
+                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
+                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
+                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
+                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
+                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
+                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
+            </div>
 
 
             <SheetFooter className='-mx-6 bg-white p-8'>

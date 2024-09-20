@@ -7,7 +7,7 @@ export const categories = [
     {name: 'Drinks'},
     {name: 'Deserst'},
 ]
-export const ingredients = [
+export const _ingredients = [
     {
         name: 'Cheesy crust',
         price: 179,
