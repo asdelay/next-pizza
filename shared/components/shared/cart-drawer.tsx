@@ -3,7 +3,6 @@ import React, {FC} from 'react'
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
@@ -13,30 +12,51 @@ import Link from 'next/link'
 import { Button } from '../ui'
 import { ArrowRight } from 'lucide-react'
 import { CartDrawerItem } from './cart-drawer-item'
+import { useCartStore } from '@/shared/store'
+import { getCartItemsDetails } from '@/shared/lib'
+import { PizzaSize, PizzaType } from '@/shared/constants/ pizza'
   
 interface Props {
     className?: string
 }
 
 export const CartDrawer: FC<React.PropsWithChildren<Props>> = ({children, className}) => {
+    const [totalAmount, fetchCartItems, updateItemQuantity, items] = useCartStore(state => [state.totalAmount, state.fetchCartItems, state.updateItemQuantity, state.items])
+
+    React.useEffect (() => {
+        fetchCartItems()
+    }, [])
+
+    const onClickCountButton = (id: number, quantity: number, type: 'plus' | 'minus') => {
+        const newQuantity = type === 'plus'? quantity + 1 : quantity - 1
+        updateItemQuantity(id, newQuantity)
+    }
+
 return (
     <Sheet>
         <SheetTrigger asChild>{children}</SheetTrigger>    
         <SheetContent className='flex flex-col justify-between pb-0 bg-[#F4F1EE]'>
             <SheetHeader>
                 <SheetTitle>
-                    <span className='font-bold'>3 items</span>
+                    <span className='font-bold'>{items.length} item{items.length > 1 && 's'}</span>
                 </SheetTitle>
             </SheetHeader>
 
             <div className='-mx-6 mt-5 overflow-auto flex-1'>
-                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
-                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
-                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
-                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
-                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
-                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
-                <CartDrawerItem id={1} imageUrl={'https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.avif'} details={'Tasty pizza mmhmhmhmm😋😋😋'} name={'Pepperoni Fresh'} price={10} quantity={1}/>
+                {
+                    items.map(item => (
+                        <CartDrawerItem 
+                            key={item.id} 
+                            id={item.id} 
+                            imageUrl={item.imageUrl} 
+                            details={item.pizzaType && item.pizzaSize ? getCartItemsDetails(item.ingredients, item.pizzaType as PizzaType, item.pizzaSize as PizzaSize, ): ''} 
+                            name={item.name} 
+                            price={item.price} 
+                            quantity={item.quantity}
+                            onClickCountButton={type => onClickCountButton(item.id, item.quantity, type)}
+                        />                
+                    ))
+                }
             </div>
 
 
@@ -47,7 +67,7 @@ return (
                             Total: 
                             <div className='flex-1 border-b border-dashed border-b-neutral-200 relative -top-1 mx-2'/>
                         </span>
-                        <span className='font-bold text-lg'>100 €</span>
+                        <span className='font-bold text-lg'>{totalAmount} €</span>
                     </div>
 
                     <Link href='/cart'>
