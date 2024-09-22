@@ -21,7 +21,7 @@ interface Props {
 }
 
 export const CartDrawer: FC<React.PropsWithChildren<Props>> = ({children, className}) => {
-    const [totalAmount, fetchCartItems, updateItemQuantity, items] = useCartStore(state => [state.totalAmount, state.fetchCartItems, state.updateItemQuantity, state.items])
+    const [totalAmount, fetchCartItems, updateItemQuantity, removeCartItem, items] = useCartStore(state => [state.totalAmount, state.fetchCartItems, state.updateItemQuantity, state.removeCartItem, state.items])
 
     React.useEffect (() => {
         fetchCartItems()
@@ -54,6 +54,7 @@ return (
                             price={item.price} 
                             quantity={item.quantity}
                             onClickCountButton={type => onClickCountButton(item.id, item.quantity, type)}
+                            onClickRemove={() => removeCartItem(item.id)}
                         />                
                     ))
                 }
